@@ -1,5 +1,6 @@
 from FuncionCargarInstrucciones import *
 from FuncionCargarProductos import *
+from FuncionAnalisisdeDatos import *
 
 
 def menuPrincipal():
@@ -36,6 +37,7 @@ def menuPrincipal():
                print("DATOS CARGADOS CON ÉXITO! ")
                cargaDeDatos = True
            else:
+               cargaDeDatos = False
                print("FALLÓ AL INTENTAR CARGAR DATOS! ")   
         elif opcion == 2:
              name,graphic,title,titleX,titleY,validInstructions = cargarInstrucciones()
@@ -44,10 +46,12 @@ def menuPrincipal():
                 print(name,graphic,title,titleX,titleY,validInstructions)
                 cargaDeInstrucciones = True
              else:
+                cargaDeInstrucciones = False
                 print("FALLÓ LA CARGA DE INSTRUCCIONES")
         elif opcion == 3:
             if cargaDeDatos and cargaDeInstrucciones:
                 print("Análisis de Datos")
+                AnalizarData(productExtraidos,name,graphic,title,titleX,titleY)
             elif not cargaDeDatos:
                 print("Debe cargar los datos primero para realizar el análisis")
             elif not cargaDeInstrucciones:
