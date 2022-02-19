@@ -27,6 +27,7 @@ def AnalizarData(productos,name,graphic,title,titleX,titleY):
                     'size': 18})
         plt.savefig(name+'.png')
         plt.show()
+        print("ANÁLISIS REALIZADO CON ÉXITO! ")
     elif graphic == "lineas":
         print("Generando gráfico de Líneas... ")
         xpoints = np.array(ejeX)
@@ -41,7 +42,7 @@ def AnalizarData(productos,name,graphic,title,titleX,titleY):
         plt.plot(xpoints, ypoints)
         plt.savefig(name+'.png')
         plt.show()
-        
+        print("ANÁLISIS REALIZADO CON ÉXITO! ")
     elif graphic == "pie":       
         print("Generando gráfica de Pie... ") 
         for x in range(len(productos)-1):
@@ -60,7 +61,7 @@ def AnalizarData(productos,name,graphic,title,titleX,titleY):
                     'size': 18})
         plt.savefig(name+'.png')
         plt.show()
-        
+        print("ANÁLISIS REALIZADO CON ÉXITO! ")
     
         
         

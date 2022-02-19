@@ -73,6 +73,7 @@ def generarReporte(productos):
     file.write(masVendido)    
     file.write(menosVendido)   
     file.write(final)
+    print("REPORTE CREADO CON ÉXITO! ")
     file.close()
 
 

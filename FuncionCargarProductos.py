@@ -92,7 +92,7 @@ def agregarProducto(lista,c):
 
 
 def cargarProductos():
-
+  print("Cargando datos...")
   ruta_archivo = easygui.fileopenbox() 
   f = open (ruta_archivo,'r')
   texto = f.read()
