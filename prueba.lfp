@@ -1,5 +1,7 @@
 <¿
-Grafica: "Lineas",
+Grafica: "Barras",
 Titulo: "Reporte de Ventas Agosto",
+TituloX: "Product",
+TituloY: "Ventas",
 Nombre: "Grafica de pruebas"
 ?>

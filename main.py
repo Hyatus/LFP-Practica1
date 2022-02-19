@@ -1,7 +1,8 @@
 from FuncionCargarInstrucciones import *
 from FuncionCargarProductos import *
 from FuncionAnalisisdeDatos import *
-
+from FuncionReportes import *
+#Sintáctico utilizando pila 
 
 def menuPrincipal():
     #Variables para la carga de Productos
@@ -22,13 +23,15 @@ def menuPrincipal():
     cargaDeInstrucciones = False
     opcion = 0
     while(opcion != 5):
-        print("\n-------- MENÚ PRINCIPAL ------------")
-        print("OPCIONES: ")
-        print("1. Cargar Data ")
-        print("2. Cargar Instrucciones ")
-        print("3. Analizar datos ")
-        print("4. Generar Reportes ")
-        print("5. Salir ")
+        print("\n███████ MENÚ PRINCIPAL ██████████")
+        print("█OPCIONES:                      █")
+        print("█1. Cargar Data                 █")
+        print("█2. Cargar Instrucciones        █")
+        print("█3. Analizar datos              █")
+        print("█4. Generar Reportes            █")
+        print("█5. Salir                       █")
+        print("█████████████████████████████████")
+        print(" ")
         opcion = int(input("Ingrese una de las opciones: "))
         print(" ")
         if opcion == 1:
@@ -42,9 +45,8 @@ def menuPrincipal():
         elif opcion == 2:
              name,graphic,title,titleX,titleY,validInstructions = cargarInstrucciones()
              if validInstructions:
+                cargaDeInstrucciones = True 
                 print("CARGA DE INSTRUCCIONES REALIZADA CON ÉXITO! ")
-                print(name,graphic,title,titleX,titleY,validInstructions)
-                cargaDeInstrucciones = True
              else:
                 cargaDeInstrucciones = False
                 print("FALLÓ LA CARGA DE INSTRUCCIONES")
@@ -57,7 +59,13 @@ def menuPrincipal():
             elif not cargaDeInstrucciones:
                 print("Debe ingresar primero las instrucciones para realizar el análisis ")    
         elif opcion == 4:
-            print("Generar Reportes")
+            if cargaDeDatos and cargaDeInstrucciones:
+                print("Generando Reporte...")
+                generarReporte(productExtraidos)
+            elif not cargaDeDatos:
+                print("Debe cargar los datos primero para realizar el reporte")
+            elif not cargaDeInstrucciones:
+                print("Debe ingresar primero las instrucciones para realizar el reporte ")    
         elif opcion == 5: 
             print("Saliendo...")
         else:

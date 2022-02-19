@@ -15,7 +15,7 @@ def AnalizarData(productos,name,graphic,title,titleX,titleY):
     
     #El método que se va a utilizar va a retornar 2 cosas 
     graphic = graphic.lower()
-    if graphic == "Generando gráfica de Barras... ":
+    if graphic == "barras":
         fig, ax = plt.subplots()
         ax.bar(ejeX,ejeY)
         ax.set_ylabel(titleY)

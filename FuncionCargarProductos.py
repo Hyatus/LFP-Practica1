@@ -76,6 +76,7 @@ def agregarProducto(lista,c):
     listaAux.append(lista[c])
     c += 1 
   
+   
   cantidadUnidades = cantidadUnidades.join(listaAux)
   listaAux.clear()
   # print("Cantidad de Unidades : " + cantidadUnidades)
@@ -111,7 +112,7 @@ def cargarProductos():
       lista2.append(elemento)
 
   #print(lista2,end=" ")
-
+ 
   c = 0
   #Tomamos el nombre del mes
   while lista2[c] != ":" and c < len(lista2):
